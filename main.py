@@ -138,15 +138,3 @@ if st.sidebar.button("Atualizar"):
 total_aulas_concluidas = st.session_state.df["Aulas Concluídas"].sum()
 total_simulados_concluidos = st.session_state.df["Simulado Concluído"].sum()
 total_horas_estudo_concluidas = st.session_state.df["Horas Estudo Concluídas"].sum()
-
-col1, col2, col3 = st.columns(3)
-col1.metric("Aulas Concluídas", total_aulas_concluidas)
-col2.metric("Simulados Concluídos", total_simulados_concluidos)
-col3.metric("Horas Estudo Concluídas", total_horas_estudo_concluidas)
-
-# Gráficos divididos em 2 colunas
-col1, col2 = st.columns(2)
-col1.plotly_chart(fig1, use_container_width=True)
-col1.plotly_chart(fig2, use_container_width=True)
-col2.plotly_chart(fig3, use_container_width=True)
-col2.plotly_chart(fig4, use_container_width=True)
