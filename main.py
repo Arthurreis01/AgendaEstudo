@@ -117,7 +117,6 @@ col2.plotly_chart(fig3, use_container_width=True)
 col2.plotly_chart(fig4, use_container_width=True)
 
 # Atualização dos dados
-st.header("Atualizar Progresso Semanal")
 selected_week = st.sidebar.selectbox("Selecione a Semana", st.session_state.df["Semana"])
 aulas_concluidas = st.sidebar.number_input("Aulas Concluídas", min_value=0, max_value=6, step=1)
 simulado_concluido = st.sidebar.checkbox("Simulado Concluído")
